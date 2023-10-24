@@ -53,11 +53,8 @@
       const username = event.target[0].value;
       const password = event.target[1].value;
       const credentials = { username: username, password: password };
-      console.log(username);
-      console.log(password);
 
       postData("/api/login", credentials).then((data) => {
-        console.log(data);
         if (data === null) {
           document.getElementById("wrong_password").innerHTML =
             "Wrong password!";
